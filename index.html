@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<style>*{box-sizing:border-box}body{font-family:system-ui,sans-serif;margin:0}</style>
+<meta name='generator' content='mdx-deck'>
+<title data-head="true">GraphQL - Primeiros Passos</title><style data-styled="gqXzsY eIhpmh iJsiAg eyUBso jlZJhL gCTSpV ioqUbC EPtRV klBICh likAae ljZZRq krEKJw lhITAe fnOZcJ jLwQmR gCTrrR cwLvlE fCkVFJ bJTWjb hxCbTh bXwOhG kfwTvB eSmywD djhUyT hfueiy hhOokc wJUqW flYqAW gkgfDX VAWLZ fidRYa bnZsTg xtnVi gUKKmP eLKZAI htdezM fHDcrp jucmbo bENqf" data-styled-version="4.3.2">
+/* sc-component-id: Flex-sc-1wyx7c4-0 */
+.eLKZAI{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin-left:auto;margin-right:auto;margin-bottom:8px;} @media print{.eLKZAI{display:none;}}
+/* sc-component-id: Dots__Dot-m5ie3q-0 */
+.htdezM{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:4px solid transparent;background-clip:padding-box;border-radius:9999px;width:8px;height:8px;color:inherit;opacity:0.5;margin:0;padding:4px;color:#fff;background-color:#fff;} .htdezM:focus{outline:none;box-shadow:0 0 0 1px;}.fHDcrp{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:4px solid transparent;background-clip:padding-box;border-radius:9999px;width:8px;height:8px;color:inherit;opacity:0.125;margin:0;padding:4px;color:#fff;background-color:#fff;} .fHDcrp:focus{outline:none;box-shadow:0 0 0 1px;}
+/* sc-component-id: Provider__Bottom-sc-1iqnegd-0 */
+.gUKKmP{position:fixed;left:0;right:0;bottom:0;}
+/* sc-component-id: sc-bdVaJa */
+.jucmbo{cursor:pointer;width:64px;height:100vh;position:fixed;top:0;left:0;bottom:0;}
+/* sc-component-id: sc-bwzfXH */
+.bENqf{cursor:pointer;width:64px;height:100vh;position:fixed;top:0;right:0;bottom:0;}
+/* sc-component-id: Carousel__CarouselRoot-sc-1sjk1xy-0 */
+.eIhpmh{overflow-x:hidden;width:100%;height:100%;} @media print{.eIhpmh{height:auto;overflow-x:visible;}}
+/* sc-component-id: Carousel__CarouselInner-sc-1sjk1xy-1 */
+.iJsiAg{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;height:100%;-webkit-transition-property:-webkit-transform;-webkit-transition-property:transform;transition-property:transform;-webkit-transition-timing-function:ease-out;transition-timing-function:ease-out;-webkit-transition-duration:.3s;transition-duration:.3s;-webkit-transform:translate3d(0%,0,0);-ms-transform:translate3d(0%,0,0);transform:translate3d(0%,0,0);} @media print{.iJsiAg{height:auto;display:block;}}
+/* sc-component-id: Slide__Root-sc-1lv2mpt-0 */
+.eyUBso{-webkit-flex:none;-ms-flex:none;flex:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;overflow:hidden;width:100%;height:100%;padding-left:32px;padding-right:32px;} @media print{.eyUBso{width:100vw;height:100vh;page-break-after:always;page-break-inside:avoid;-webkit-print-color-adjust:exact;}} @media screen and (min-width:40em){.eyUBso{padding-left:64px;padding-right:64px;}} @media screen and (min-width:52em){.eyUBso{padding-left:128px;padding-right:128px;}}
+/* sc-component-id: Root-sc-14f5wl6-0 */
+.gqXzsY{font-family:system-ui,sans-serif;font-size:16px;text-align:center;width:100vw;height:100vh;color:#fff;background-color:#272425;} @media print{.gqXzsY{font-size:24px;height:auto;}} @media screen and (min-width:64em){.gqXzsY{font-size:32px;}} .gqXzsY li > ul,.gqXzsY li > ol{font-size:inherit;} .gqXzsY li > p{font-size:inherit;margin:0;}
+/* sc-component-id: sc-fjdhpX */
+.kfwTvB{line-height:1.25;font-size:3em;}
+/* sc-component-id: sc-jzJRlG */
+.hhOokc{line-height:1.25;font-size:2em;}
+/* sc-component-id: components__a-mhn4yb-1 */
+.gkgfDX{color:#08f;}
+/* sc-component-id: components__ul-mhn4yb-3 */
+.wJUqW{text-align:left;font-size:1.5em;text-align:left;}
+/* sc-component-id: Cover__Root-xu1t2l-0 */
+.jlZJhL{width:50vw;height:70vh;}
+/* sc-component-id: Cover__Img-xu1t2l-1 */
+.ioqUbC{width:150px;}
+/* sc-component-id: Cover__Center-xu1t2l-2 */
+.gCTSpV{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}
+/* sc-component-id: Cover__Title-xu1t2l-3 */
+.EPtRV{font-size:50px;margin-top:20px;}
+/* sc-component-id: Cover__Subtitle-xu1t2l-4 */
+.klBICh{font-size:40px;color:#e052b1;margin-top:20px;}
+/* sc-component-id: Cover__MeName-xu1t2l-5 */
+.likAae{font-size:30px;color:#25D7FD;margin-top:100px;}
+/* sc-component-id: sc-kEYyzF */
+.bXwOhG{box-sizing:border-box;margin-top:30px;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}
+/* sc-component-id: Intro__IconImage-sc-2kt2zr-0 */
+.cwLvlE{max-height:60px;max-width:60px;}
+/* sc-component-id: Intro__Link-sc-2kt2zr-1 */
+.gCTrrR{-webkit-text-decoration:none;text-decoration:none;color:white;}
+/* sc-component-id: Intro__Me-sc-2kt2zr-2 */
+.lhITAe{max-width:150px;max-height:150px;}
+/* sc-component-id: Intro__MeName-sc-2kt2zr-3 */
+.fnOZcJ{font-size:50px;color:#25D7FD;margin-left:60px;}
+/* sc-component-id: Intro__Row-sc-2kt2zr-4 */
+.krEKJw{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:40px;}
+/* sc-component-id: Intro__Center-sc-2kt2zr-5 */
+.bJTWjb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}
+/* sc-component-id: Intro__SpaceBetween-sc-2kt2zr-6 */
+.jLwQmR{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}
+/* sc-component-id: Intro__Root-sc-2kt2zr-7 */
+.ljZZRq{height:70vh;}
+/* sc-component-id: Intro__Username-sc-2kt2zr-8 */
+.fCkVFJ{font-size:14px;margin-left:20px;}
+/* sc-component-id: Intro__EntriaLogo-sc-2kt2zr-9 */
+.hxCbTh{max-width:600px;}
+/* sc-component-id: Img__StyledImg-sc-8pbnfx-0 */
+.djhUyT{width:400px;}.hfueiy{width:700px;}
+/* sc-component-id: Img__Center-sc-8pbnfx-1 */
+.eSmywD{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}
+/* sc-component-id: Thanks__Root-sc-1w5mi5b-0 */
+.VAWLZ{width:50vw;height:70vh;}
+/* sc-component-id: Thanks__ThanksText-sc-1w5mi5b-2 */
+.bnZsTg{font-size:50px;color:#ffffff;}
+/* sc-component-id: Thanks__Center-sc-1w5mi5b-4 */
+.fidRYa{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}
+/* sc-component-id: Thanks__EntriaLogo-sc-1w5mi5b-5 */
+.xtnVi{max-width:600px;margin-top:100px;}</style>
+</head>
+<body>
+<div id=root><div><div mode="NORMAL" step="0" width="100vw" height="100vh" color="text" class="Root-sc-14f5wl6-0 gqXzsY"><div class="Carousel__CarouselRoot-sc-1sjk1xy-0 eIhpmh"><div class="Carousel__CarouselInner-sc-1sjk1xy-1 iJsiAg"><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><div class="Cover__Root-xu1t2l-0 jlZJhL"><div class="Cover__Center-xu1t2l-2 gCTSpV"><img src="./img/graphql.png" width="150" class="Cover__Img-xu1t2l-1 ioqUbC"/><span class="Cover__Title-xu1t2l-3 EPtRV">GraphQL</span><span class="Cover__Subtitle-xu1t2l-4 klBICh">Primeiros passos</span><span class="Cover__MeName-xu1t2l-5 likAae">Luan Santos</span></div></div></div></div><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><div class="Intro__Root-sc-2kt2zr-7 ljZZRq"><div class="Intro__Row-sc-2kt2zr-4 krEKJw"><img src="./img/me.jpg" class="Intro__Me-sc-2kt2zr-2 lhITAe"/><span class="Intro__MeName-sc-2kt2zr-3 fnOZcJ">Luan Santos</span></div><div class="Intro__SpaceBetween-sc-2kt2zr-6 jLwQmR"><div><a href="https://github.com/luansantosti" target="_blank" class="Intro__Link-sc-2kt2zr-1 gCTrrR"><div class="Intro__Row-sc-2kt2zr-4 krEKJw"><img src="./img/github.png" class="Intro__IconImage-sc-2kt2zr-0 cwLvlE"/><span class="Intro__Username-sc-2kt2zr-8 fCkVFJ">@luansantosti</span></div></a></div><div><a href="https://twitter.com/luansantosti" target="_blank" class="Intro__Link-sc-2kt2zr-1 gCTrrR"><div class="Intro__Row-sc-2kt2zr-4 krEKJw"><img src="./img/twitter.png" class="Intro__IconImage-sc-2kt2zr-0 cwLvlE"/><span class="Intro__Username-sc-2kt2zr-8 fCkVFJ">@luansantosti</span></div></a></div></div><div class="Intro__Center-sc-2kt2zr-5 bJTWjb"><img src="./img/entriaLogo.png" class="Intro__EntriaLogo-sc-2kt2zr-9 hxCbTh"/></div><div class="sc-hMqMXs sc-kEYyzF bXwOhG"><span class="Intro__MeName-sc-2kt2zr-3 fnOZcJ">Fullstack Developer</span></div></div></div></div><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><h1 font-size="4" class="components__Heading-mhn4yb-0-h1 sc-fjdhpX kfwTvB">Overview</h1><ul><li style="visibility:hidden">Single Endpoint</li><li style="visibility:hidden">Overfetching / Under-fetching</li><li style="visibility:hidden">Schema</li></ul></div></div><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><h1 font-size="4" class="components__Heading-mhn4yb-0-h1 sc-fjdhpX kfwTvB">Schema</h1><div class="Intro__Root-sc-2kt2zr-7 ljZZRq"><div class="Img__Center-sc-8pbnfx-1 eSmywD"><img src="./img/schema.png" width="400" class="Img__StyledImg-sc-8pbnfx-0 djhUyT"/></div></div></div></div><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><h1 font-size="4" class="components__Heading-mhn4yb-0-h1 sc-fjdhpX kfwTvB">Schema</h1><div class="Intro__Root-sc-2kt2zr-7 ljZZRq"><div class="Img__Center-sc-8pbnfx-1 eSmywD"><img src="./img/schema1.png" width="400" class="Img__StyledImg-sc-8pbnfx-0 djhUyT"/></div></div></div></div><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><h1 font-size="4" class="components__Heading-mhn4yb-0-h1 sc-fjdhpX kfwTvB">Scalar types</h1><ul><li style="visibility:hidden">Int</li><li style="visibility:hidden">Float</li><li style="visibility:hidden">String</li><li style="visibility:hidden">Boolean</li><li style="visibility:hidden">ID</li></ul></div></div><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><h1 font-size="4" class="components__Heading-mhn4yb-0-h1 sc-fjdhpX kfwTvB">Query X Mutation</h1></div></div><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><h1 font-size="4" class="components__Heading-mhn4yb-0-h1 sc-fjdhpX kfwTvB">Query</h1><div class="Intro__Root-sc-2kt2zr-7 ljZZRq"><div class="Img__Center-sc-8pbnfx-1 eSmywD"><img src="./img/query.png" width="700" class="Img__StyledImg-sc-8pbnfx-0 hfueiy"/></div></div></div></div><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><h1 font-size="4" class="components__Heading-mhn4yb-0-h1 sc-fjdhpX kfwTvB">Mutation</h1><div class="Intro__Root-sc-2kt2zr-7 ljZZRq"><div class="Img__Center-sc-8pbnfx-1 eSmywD"><img src="./img/mutation.png" width="700" class="Img__StyledImg-sc-8pbnfx-0 hfueiy"/></div></div></div></div><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><h1 font-size="4" class="components__Heading-mhn4yb-0-h1 sc-fjdhpX kfwTvB">Resolvers</h1><div class="Intro__Root-sc-2kt2zr-7 ljZZRq"><div class="Img__Center-sc-8pbnfx-1 eSmywD"><img src="./img/resolver.png" width="700" class="Img__StyledImg-sc-8pbnfx-0 hfueiy"/></div></div></div></div><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><h1 font-size="4" class="components__Heading-mhn4yb-0-h1 sc-fjdhpX kfwTvB">Resolvers</h1><div class="Intro__Root-sc-2kt2zr-7 ljZZRq"><div class="Img__Center-sc-8pbnfx-1 eSmywD"><img src="./img/resolver1.png" width="700" class="Img__StyledImg-sc-8pbnfx-0 hfueiy"/></div></div></div></div><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><h1 font-size="4" class="components__Heading-mhn4yb-0-h1 sc-fjdhpX kfwTvB">GraphiQL</h1><div class="Intro__Root-sc-2kt2zr-7 ljZZRq"><div class="Img__Center-sc-8pbnfx-1 eSmywD"><img src="./img/graphiql.png" width="700" class="Img__StyledImg-sc-8pbnfx-0 hfueiy"/></div></div></div></div><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><h2 font-size="3" class="components__Heading-mhn4yb-0-h2 sc-jzJRlG hhOokc">References</h2><ul font-size="2" class="components__ul-mhn4yb-3 wJUqW"><li class="components__li-mhn4yb-5 flYqAW"><a href="https://graphql.org/learn//" color="link" class="components__a-mhn4yb-1 gkgfDX">GraphQL.org</a></li><li class="components__li-mhn4yb-5 flYqAW"><a href="https://www.howtographql.com/" color="link" class="components__a-mhn4yb-1 gkgfDX">How to GraphQL</a></li></ul></div></div><div class="Slide__Root-sc-1lv2mpt-0 eyUBso"><div><div class="Thanks__Root-sc-1w5mi5b-0 VAWLZ"><div class="Thanks__Center-sc-1w5mi5b-4 fidRYa"><span class="Thanks__ThanksText-sc-1w5mi5b-2 bnZsTg">Thanks!</span></div><div class="Thanks__Center-sc-1w5mi5b-4 fidRYa"><img src="./img/entriaLogo.png" class="Thanks__EntriaLogo-sc-1w5mi5b-5 xtnVi"/></div></div></div></div></div></div></div></div><div class="Provider__Bottom-sc-1iqnegd-0 gUKKmP"><div class="Flex-sc-1wyx7c4-0 eLKZAI"><button title="go to: 0" color="text" class="Dots__Dot-m5ie3q-0 htdezM"></button><button title="go to: 1" color="text" class="Dots__Dot-m5ie3q-0 fHDcrp"></button><button title="go to: 2" color="text" class="Dots__Dot-m5ie3q-0 fHDcrp"></button><button title="go to: 3" color="text" class="Dots__Dot-m5ie3q-0 fHDcrp"></button><button title="go to: 4" color="text" class="Dots__Dot-m5ie3q-0 fHDcrp"></button><button title="go to: 5" color="text" class="Dots__Dot-m5ie3q-0 fHDcrp"></button><button title="go to: 6" color="text" class="Dots__Dot-m5ie3q-0 fHDcrp"></button><button title="go to: 7" color="text" class="Dots__Dot-m5ie3q-0 fHDcrp"></button><button title="go to: 8" color="text" class="Dots__Dot-m5ie3q-0 fHDcrp"></button><button title="go to: 9" color="text" class="Dots__Dot-m5ie3q-0 fHDcrp"></button><button title="go to: 10" color="text" class="Dots__Dot-m5ie3q-0 fHDcrp"></button><button title="go to: 11" color="text" class="Dots__Dot-m5ie3q-0 fHDcrp"></button><button title="go to: 12" color="text" class="Dots__Dot-m5ie3q-0 fHDcrp"></button><button title="go to: 13" color="text" class="Dots__Dot-m5ie3q-0 fHDcrp"></button></div></div><div role="button" title="Previous Slide" class="Provider__Button-sc-1iqnegd-1 sc-bdVaJa jucmbo"></div><div role="button" title="Next Slide" class="Provider__Button-sc-1iqnegd-1 sc-bwzfXH bENqf"></div></div>
+<script src="main.js"></script>
+</body>
+</html>
